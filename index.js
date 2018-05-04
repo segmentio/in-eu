@@ -8,12 +8,36 @@ const jstz = require('jstz')
   using people's IPs to determine their location.
 */
 module.exports = function isInEU() {
-  const tz = browserTimezone()
-  const locale = browserLocale()
-  return (tz && isInEUTimezone(tz)) || (locale && isEULocale(locale))
+  return isInEUTimezone() || isEULocale()
 }
 
-const countryCodes = {
+module.exports.isInEUTimezone = isInEUTimezone
+module.exports.isEULocale = isEULocale
+
+/*
+  Loosely checks that a given locale partially matches an EU country code.
+  This won't work perfect for every language, but it should give us some
+  extra signal.
+
+  http://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Country_codes
+*/
+function isEULocale() {
+  const locale = browserLocale()
+  let code = locale
+
+  if (locale.includes('-')) {
+    code = locale.split('-')[1]
+  }
+
+  return !!countryCodes[code.toUpperCase()]
+}
+
+function isInEUTimezone() {
+  const tz = browserTimezone()
+  return tz && tz.indexOf('Europe') >= 0
+}
+
+var countryCodes = {
   BE: 'Belgium',
   EL: 'Greece',
   LT: 'Lithuania',
@@ -43,26 +67,6 @@ const countryCodes = {
   PL: 'Poland',
   UK: 'United Kingdom',
   GB: 'United Kingdom'
-}
-
-/*
-  Loosely checks that a given locale partially matches an EU country code.
-  This won't work perfect for every language, but it should give us some
-  extra signal.
-
-  http://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Country_codes
-*/
-function isEULocale(locale) {
-  let code = locale
-  if (locale.includes('-')) {
-    code = locale.split('-')[1]
-  }
-
-  return !!countryCodes[code.toUpperCase()]
-}
-
-function isInEUTimezone(tz) {
-  return tz.indexOf('Europe') > 0
 }
 
 function browserTimezone() {
