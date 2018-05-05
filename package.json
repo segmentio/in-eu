@@ -1,6 +1,6 @@
 {
-  "name": "in-eu",
-  "version": "1.0.0",
+  "name": "@segment/in-eu",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
