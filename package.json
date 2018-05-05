@@ -7,8 +7,8 @@
     "test": "ava index.test.js",
     "build": "webpack"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Netto Farah<netto@segment.com>",
+  "license": "MIT",
   "dependencies": {
     "jstz": "^2.0.0"
   },
