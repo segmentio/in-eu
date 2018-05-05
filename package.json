@@ -4,19 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ava index.test.js",
-    "build": "webpack"
+    "test": "ava index.test.js"
   },
   "author": "Netto Farah<netto@segment.com>",
   "license": "MIT",
   "dependencies": {
     "jstz": "^2.0.0"
   },
+  "files": [
+    "index.js"
+  ],
   "devDependencies": {
     "ava": "^0.25.0",
-    "babel-loader": "^7.1.4",
-    "browser-env": "^3.2.5",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.1.2"
+    "browser-env": "^3.2.5"
   }
 }

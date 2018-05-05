@@ -1,4 +1,4 @@
-const jstz = require('jstz')
+var jstz = require('jstz')
 
 /*
   Loosely checks if someone's in Europe based on their timezone or locale.
@@ -22,8 +22,8 @@ module.exports.isEULocale = isEULocale
   http://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Country_codes
 */
 function isEULocale() {
-  const locale = browserLocale()
-  let code = locale
+  var locale = browserLocale()
+  var code = locale
 
   if (locale.includes('-')) {
     code = locale.split('-')[1]
@@ -33,7 +33,7 @@ function isEULocale() {
 }
 
 function isInEUTimezone() {
-  const tz = browserTimezone()
+  var tz = browserTimezone()
   return tz && tz.indexOf('Europe') >= 0
 }
 
@@ -70,7 +70,7 @@ var countryCodes = {
 }
 
 function browserTimezone() {
-  const timezone = jstz.determine()
+  var timezone = jstz.determine()
   return timezone.name()
 }
 
