@@ -26,7 +26,7 @@ import { isInEUTimezone } from '@segment/in-eu'
 
 /*
  Only checks the browser timezone.
- Useful for checking if someone is phisically present in the EU
+ Useful for checking if someone is physically present in the EU
 */
 
 isInEUTimezone()
