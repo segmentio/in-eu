@@ -7,7 +7,7 @@
   "scripts": {
     "test": "ava index.test.js"
   },
-  "author": "Netto Farah<netto@segment.com>",
+  "author": "Netto Farah <netto@segment.com>",
   "license": "MIT",
   "dependencies": {
     "jstz": "^2.0.0"
