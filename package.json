@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "Privacy conscious EU detection browser library",
   "keywords": ["gdpr", "europe", "timezone", "locale"],
+  "repository": "segmentio/in-eu",
   "main": "index.js",
   "scripts": {
     "test": "ava index.test.js"
