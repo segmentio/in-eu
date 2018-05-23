@@ -83,7 +83,7 @@ var countryCodes = {
   LV: 'Latvia',
   PL: 'Poland',
   UK: 'United Kingdom',
-  GB: 'United Kingdom'
+  GB: 'United Kingdom',
   AI: 'Anguilla',
   BM: 'Bermuda',
   IO: 'British Indian Ocean Territory',
@@ -97,7 +97,7 @@ var countryCodes = {
   TC: 'Turks and Caicos Islands',
   GG: 'Guernsey',
   JE: 'Jersey',
-  IM: 'Isle of Man',
+  IM: 'Isle of Man'
 }
 
 function browserTimezone() {
