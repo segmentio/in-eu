@@ -25,7 +25,7 @@ function isEULocale() {
   var locale = browserLocale()
   var code = locale
 
-  if (locale.includes('-')) {
+  if (locale.indexOf('-') >= 0) {
     code = locale.split('-')[1]
   }
 
