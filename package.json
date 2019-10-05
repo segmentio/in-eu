@@ -10,6 +10,7 @@
   ],
   "repository": "segmentio/in-eu",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "ava index.test.js"
   },
