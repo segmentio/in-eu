@@ -20,7 +20,8 @@
     "jstz": "^2.0.0"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "devDependencies": {
     "ava": "^0.25.0",
