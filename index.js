@@ -36,18 +36,43 @@ function isInEUTimezone() {
   var tz = browserTimezone()
   return tz && tz.indexOf('Europe') >= 0
 }
-
+/*
+List includes all EU and EEA countries
+*/
 var countryCodes = {
+  AT: 'Austria',
   BE: 'Belgium',
-  EL: 'Greece',
-  LT: 'Lithuania',
-  PT: 'Portugal',
   BG: 'Bulgaria',
-  ES: 'Spain',
-  LU: 'Luxembourg',
-  RO: 'Romania',
+  CY: 'Cyprus',
   CZ: 'Czech Republic',
+  DE: 'Germany',
+  DK: 'Denmark',
+  EE: 'Estonia',
+  EL: 'Greece',
+  ES: 'Spain',
+  FI: 'Finland',
   FR: 'France',
+  HR: 'Croatia',
+  HU: 'Hungary',
+  IE: 'Ireland',
+  IT: 'Italy',
+  LT: 'Lithuania',
+  LU: 'Luxembourg',
+  LV: 'Latvia',
+  MT: 'Malta',
+  NL: 'Netherlands',
+  PL: 'Poland',
+  PT: 'Portugal',
+  RO: 'Romania',
+  SE: 'Sweden',
+  SI: 'Slovenia',
+  SK: 'Slovakia',
+  IS: 'Iceland',
+  LI: 'Liechtenstein',
+  NO: 'Norway',
+  CH: 'Switzerland', // Added Switzerland
+
+  // Additional regions associated with EU countries
   RE: 'Reunion',
   GP: 'Guadeloupe',
   MQ: 'Martinique',
@@ -59,31 +84,8 @@ var countryCodes = {
   WF: 'Wallis and Futuna',
   PF: 'French Polynesia',
   NC: 'New Caledonia',
-  HU: 'Hungary',
-  SI: 'Slovenia',
-  DK: 'Denmark',
-  FO: 'Faroe Islands',
-  GL: 'Greenland',
-  HR: 'Croatia',
-  MT: 'Malta',
-  SK: 'Slovakia',
-  DE: 'Germany',
-  IT: 'Italy',
-  NL: 'Netherlands',
-  AW: 'Aruba',
-  CW: 'Curacao',
-  SX: 'Sint Maarten',
-  FI: 'Finland',
   AX: 'Aland Islands',
-  EE: 'Estonia',
-  CY: 'Cyprus',
-  AT: 'Austria',
-  SE: 'Sweden',
-  IE: 'Ireland',
-  LV: 'Latvia',
-  PL: 'Poland',
-  UK: 'United Kingdom',
-  GB: 'United Kingdom',
+  // UK territories
   AI: 'Anguilla',
   BM: 'Bermuda',
   IO: 'British Indian Ocean Territory',
@@ -97,8 +99,11 @@ var countryCodes = {
   TC: 'Turks and Caicos Islands',
   GG: 'Guernsey',
   JE: 'Jersey',
-  IM: 'Isle of Man'
-}
+  IM: 'Isle of Man',
+  GB: 'United Kingdom',
+  UK: 'United Kingdom' 
+};
+
 
 function browserTimezone() {
   var timezone = jstz.determine()
